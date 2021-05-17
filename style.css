@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 6rem;
+  line-height: 3.3rem;
+}
+
+.title h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
