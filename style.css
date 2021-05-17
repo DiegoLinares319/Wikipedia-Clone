@@ -5,7 +5,7 @@
 }
 
 :root {
-  --blue-color: #36c;
+  --blue-color: #3366cc;
   --gray-border: #a2a9b1;
   --gray-text: #54595d;
   --gray-background: #f8f9fa;
@@ -144,4 +144,112 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.search {
+  width: 100%;
+  height: 4.4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.search-input {
+  width: 54rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input input {
+  width: 39rem;
+  height: 4.4rem;
+  padding: 0.8rem 9.6rem .8rem 1.2rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 0.2rem;
+  border-width: 0.1rem 0 0.1rem 0.1rem;
+}
+
+.search-input input:focus {
+  outline: 0;
+  border: solid 0.1rem var(--blue-color);
+  box-shadow: inset 0 0 0 0.1rem var(--blue-color);
+}
+
+.select-false {
+  position: absolute;
+  top: 1rem;
+  right: 11rem;
+  cursor: pointer;
+  color: #5a5d60;
+  font-family: var(--font-familiy-secondary);
+  font-size: 1.4rem;
+}
+
+.select-false:active {
+  outline: 0;
+  border: solid 0.1rem var(--blue-color);
+}
+
+.select-false .flecha {
+  position: relative;
+  top: 0.4rem;
+  font-size: 1.8rem;
+}
+
+
+.search-input .lupa {
+  height: 4.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  color: #fff;
+  background-color: var(--blue-color);
+}
+
+.search-input .lupa:hover {
+  cursor: pointer;
+  background-color: #447ff5;
+  border-color: #447ff5;
+}
+
+.container-select-language {
+  display: flex;
+  justify-content: center;
+}
+
+.button-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6rem;
+  padding: 0.6rem 1.2rem;
+  color: var(--blue-color);
+  background-color: var(--gray-background);
+  border: 1px solid var(--gray-border);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.button-language:hover {
+  background-color: #fff;
+}
+
+.button-language:focus {
+  border-color: var(--blue-color);
+  box-shadow: 0 0 0 0.1rem var(--blue-color);
+}
+
+.button-icon-left {
+  font-size: 2rem;
+}
+
+.button-text {
+  padding: 0 0.64rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.button-icon-right {
+  font-size: 2rem;
 }
