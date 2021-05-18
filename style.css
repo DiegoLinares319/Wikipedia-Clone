@@ -213,9 +213,26 @@ body {
   border-color: #447ff5;
 }
 
+.container-select-language::before {
+  content: '______________';
+  position: relative;
+  width: 4.6rem;
+  right: 10rem;
+  color: var(--gray-border);
+}
+
 .container-select-language {
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.container-select-language::after {
+  content: '______________';
+  position: relative;
+  width: 4.6rem;
+  left: 3.4rem;
+  color: var(--gray-border);
 }
 
 .button-language {
