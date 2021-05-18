@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --blue-color: #3366cc;
+  --gray-border: #a2a9b1;
+  --gray-text: #54595d;
+  --gray-background: #f8f9fa;
+  --font-family-primary: 'Linux Libertine', serif;
+  --font-familiy-secondary: -apple-system, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.title {
+  font-family: var(--font-familiy-primary);
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  line-height: 3.3rem;
+}
+
+.title h1 {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: 1rem repeat(7, 7rem) 1rem;
+  grid-template-rows: repeat(5, 6.5rem);
+  row-gap: 0.5rem;
+  justify-content: center;
+}
+
+.language {
+  text-align: center;
+  line-height: 2rem;
+  font-family: var(--font-familiy-secondary);
+}
+
+.language:hover{
+  background: #eaecf0;
+  cursor: pointer;
+}
+
+.language a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--blue-color);
+  font-size: 1.6rem;
+}
+
+.language:hover a {
+  text-decoration: underline;
+}
+
+.language span {
+  color: var(--gray-text);
+  font-size: 1.2rem;
+  display: block;
+}
+
+.idioma1 {
+  grid-column: 1/5;
+  justify-self: end;
+}
+
+.idioma2 {
+  grid-column: 6/10;
+  justify-self: start;
+}
+
+.idioma3 {
+  grid-row: 2;
+  grid-column: 1/4;
+  justify-self: center;
+}
+
+.idioma4 {
+  grid-row: 2;
+  grid-column: 7/10;
+  justify-self: center;
+}
+
+.idioma5 {
+  grid-row: 3;
+  grid-column: 1/4;
+  justify-self: start;
+}
+
+.idioma6 {
+  grid-row: 3;
+  grid-column: 7/10;
+  justify-self: end;
+}
+
+.idioma7 {
+  grid-row: 4;
+  grid-column: 1/4;
+  justify-self: center;
+}
+
+.idioma8 {
+  grid-row: 4;
+  grid-column: 7/10;
+  justify-self: center;
+}
+
+.idioma9 {
+  grid-row: 5;
+  grid-column: 2/5;
+  justify-self: end;
+}
+
+.idioma10 {
+  grid-row: 5;
+  grid-column: 6/9;
+  justify-self: start;
+}
+
+.wiki_logo {
+  grid-column: 4/7;
+  grid-row: 2/5;
+  width: 100%;
+  height: 100%;
+}
+
+.wiki_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.search {
+  width: 100%;
+  height: 4.4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.search-input {
+  width: 54rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input input {
+  width: 39rem;
+  height: 4.4rem;
+  padding: 0.8rem 9.6rem .8rem 1.2rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 0.2rem;
+  border-width: 0.1rem 0 0.1rem 0.1rem;
+}
+
+.search-input input:focus {
+  outline: 0;
+  border: solid 0.1rem var(--blue-color);
+  box-shadow: inset 0 0 0 0.1rem var(--blue-color);
+}
+
+.select-false {
+  position: absolute;
+  top: 1rem;
+  right: 11rem;
+  cursor: pointer;
+  color: #5a5d60;
+  font-family: var(--font-familiy-secondary);
+  font-size: 1.4rem;
+}
+
+.select-false:active {
+  outline: 0;
+  border: solid 0.1rem var(--blue-color);
+}
+
+.select-false .flecha {
+  position: relative;
+  top: 0.4rem;
+  font-size: 1.8rem;
+}
+
+
+.search-input .lupa {
+  height: 4.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  color: #fff;
+  background-color: var(--blue-color);
+}
+
+.search-input .lupa:hover {
+  cursor: pointer;
+  background-color: #447ff5;
+  border-color: #447ff5;
+}
+
+.container-select-language::before {
+  content: '______________';
+  position: relative;
+  width: 4.6rem;
+  right: 10rem;
+  color: var(--gray-border);
+}
+
+.container-select-language {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.container-select-language::after {
+  content: '______________';
+  position: relative;
+  width: 4.6rem;
+  left: 3.4rem;
+  color: var(--gray-border);
+}
+
+.button-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6rem;
+  padding: 0.6rem 1.2rem;
+  color: var(--blue-color);
+  background-color: var(--gray-background);
+  border: 1px solid var(--gray-border);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.button-language:hover {
+  background-color: #fff;
+}
+
+.button-language:focus {
+  border-color: var(--blue-color);
+  box-shadow: 0 0 0 0.1rem var(--blue-color);
+}
+
+.button-icon-left {
+  font-size: 2rem;
+}
+
+.button-text {
+  padding: 0 0.64rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.button-icon-right {
+  font-size: 2rem;
+}
