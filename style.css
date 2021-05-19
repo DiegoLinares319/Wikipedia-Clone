@@ -185,7 +185,7 @@ body {
   cursor: pointer;
   color: #5a5d60;
   font-family: var(--font-familiy-secondary);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .select-false:active {
@@ -276,14 +276,16 @@ body {
   width: 100%;
   display: flex;
   padding: 4.16rem 1.28rem 1.28rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3rem;
 }
 
 .related-sites {
-  width: 35%;
+  width: 36%;
+  max-width: 36%;
   display: flex;
   flex-direction: column;
-  padding: 0 5rem 0 6.3rem;
+  align-items: center;
+  justify-content: center;
   color: var(--gray-text);
   font-family: var(--font-familiy-secondary);
   font-size: 1.3rem;
@@ -292,8 +294,8 @@ body {
 
 .donations {
   display: grid;
-  grid-template-columns: 4.2rem 32rem;
-  grid-template-rows: 4.2rem 4rem 3.8rem ;
+  grid-template-columns: 4.2rem minmax(22.5rem , 28.5rem);
+  grid-template-rows: 4.2rem auto auto ;
   margin-bottom: 3rem;
 }
 
@@ -310,13 +312,16 @@ body {
 .donations p {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
-  padding: 0 4rem 0 1rem;
+  padding-left: 1rem;
+  max-width: 28.5rem;
+  height: auto;
 }
 
 .donations a {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  padding: 0 3rem 0 1rem;
+  padding-left: 1rem;
+  max-width: 28.5rem;
   color: var(--blue-color);
   text-decoration: none;
 }
@@ -327,9 +332,18 @@ body {
 
 .download {
   display: grid;
-  grid-template-columns: 4.2rem 32rem;
+  grid-template-columns: 4.2rem minmax(22.5rem , 28.5rem);
   grid-template-rows: 4.2rem auto auto;
   background-color: var(--gray-background);
+  position: relative;
+}
+
+.download > figure {
+  width: 3.7rem;
+  height: 3.7rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
 }
 
 .download figure {
@@ -345,7 +359,8 @@ body {
 .download strong {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  padding: 0 4rem 0 1rem;
+  padding: 0 0 0 1rem;
+  max-width: 28.5rem;
   display: flex;
   align-items: center;
 }
@@ -353,7 +368,8 @@ body {
 .download p {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  padding: 0 4rem 0 1rem;
+  padding: 0 0 0 1rem;
+  max-width: 28.5rem;
   margin: 0.3rem 0 1rem 0;
 }
 
@@ -376,10 +392,13 @@ body {
 }
 
 .links-container {
-  width: 65%;
+  width: 64%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(4 , 8.5rem);
+  padding-right: 2rem;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
 }
 
 .links {
@@ -388,7 +407,7 @@ body {
   grid-template-rows: 2rem auto;
   text-decoration: none;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1.3rem;
   font-family: var(--font-familiy-secondary);
   font-size: 1.3rem;
   line-height: 1.7rem;
@@ -398,28 +417,92 @@ body {
   background-color: #eaecf0;
 }
 
-.links figure {
+.links .commons {
   grid-row: 1 / 3;
   width: 4.7rem;
   height: 4.7rem;
 }
 
+.links .wikiviajes {
+  grid-row: 1 / 3;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.links .wikcionario {
+  grid-row: 1 / 3;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
+.links .wikilibros{
+  grid-row: 1 / 3;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
+.links .wikinoticias {
+  grid-row: 1 / 3;
+  width: 4.7rem;
+  height: 2.6rem;
+}
+
+.links .wikidata {
+  grid-row: 1 / 3;
+  width: 4.9rem;
+  height: 4rem;
+}
+
+.links .wikiversidad {
+  grid-row: 1 / 3;
+  width: 4.3rem;
+  height: 3.7rem;
+}
+
+.links .wikiquote {
+  grid-row: 1 / 3;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.links .mediawiki {
+  grid-row: 1 / 3;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.links .wikisource {
+  grid-row: 1 / 3;
+  width: 3.9rem;
+  height: 3.9rem;
+}
+
+.links .wikispecies {
+  grid-row: 1 / 3;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.links .meta-wiki {
+  grid-row: 1 / 3;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
 .links figure img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
 .links p{
   color: var(--blue-color);
   padding-left: 0.5rem;
-
 }
 
 .links span {
   color: var(--gray-text);
   padding-left: 0.5rem;
-  padding-right: 5rem;
-  word-break: normal;
+  max-width: 17rem;
 }
 
 .license {
@@ -462,4 +545,10 @@ body {
   height: 1rem;
   border-radius: 50%;
   color: var(--gray-text);
+}
+
+@media (max-width: 950px) {
+  .download .apps-links {
+    flex-direction: column;
+  }
 }
