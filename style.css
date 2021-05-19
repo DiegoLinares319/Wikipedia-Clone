@@ -185,7 +185,7 @@ body {
   cursor: pointer;
   color: #5a5d60;
   font-family: var(--font-familiy-secondary);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .select-false:active {
@@ -276,14 +276,16 @@ body {
   width: 100%;
   display: flex;
   padding: 4.16rem 1.28rem 1.28rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3rem;
 }
 
 .related-sites {
-  width: 35%;
+  width: 36%;
+  max-width: 36%;
   display: flex;
   flex-direction: column;
-  padding: 0 5rem 0 6.3rem;
+  align-items: center;
+  justify-content: center;
   color: var(--gray-text);
   font-family: var(--font-familiy-secondary);
   font-size: 1.3rem;
@@ -292,8 +294,8 @@ body {
 
 .donations {
   display: grid;
-  grid-template-columns: 4.2rem 32rem;
-  grid-template-rows: 4.2rem 4rem 3.8rem ;
+  grid-template-columns: 4.2rem minmax(22.5rem , 28.5rem);
+  grid-template-rows: 4.2rem auto auto ;
   margin-bottom: 3rem;
 }
 
@@ -310,13 +312,16 @@ body {
 .donations p {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
-  padding: 0 4rem 0 1rem;
+  padding-left: 1rem;
+  max-width: 28.5rem;
+  height: auto;
 }
 
 .donations a {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  padding: 0 3rem 0 1rem;
+  padding-left: 1rem;
+  max-width: 28.5rem;
   color: var(--blue-color);
   text-decoration: none;
 }
@@ -327,9 +332,18 @@ body {
 
 .download {
   display: grid;
-  grid-template-columns: 4.2rem 32rem;
+  grid-template-columns: 4.2rem minmax(22.5rem , 28.5rem);
   grid-template-rows: 4.2rem auto auto;
   background-color: var(--gray-background);
+  position: relative;
+}
+
+.download > figure {
+  width: 3.7rem;
+  height: 3.7rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
 }
 
 .download figure {
@@ -345,7 +359,8 @@ body {
 .download strong {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  padding: 0 4rem 0 1rem;
+  padding: 0 0 0 1rem;
+  max-width: 28.5rem;
   display: flex;
   align-items: center;
 }
@@ -353,7 +368,8 @@ body {
 .download p {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  padding: 0 4rem 0 1rem;
+  padding: 0 0 0 1rem;
+  max-width: 28.5rem;
   margin: 0.3rem 0 1rem 0;
 }
 
@@ -376,10 +392,12 @@ body {
 }
 
 .links-container {
-  width: 65%;
+  width: 64%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(4 , 8.5rem);
+  padding-right: 2rem;
+  gap: 0.5rem;
 }
 
 .links {
@@ -388,7 +406,7 @@ body {
   grid-template-rows: 2rem auto;
   text-decoration: none;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1.3rem;
   font-family: var(--font-familiy-secondary);
   font-size: 1.3rem;
   line-height: 1.7rem;
@@ -398,34 +416,100 @@ body {
   background-color: #eaecf0;
 }
 
-.links figure {
+.links .commons {
   grid-row: 1 / 3;
   width: 4.7rem;
   height: 4.7rem;
 }
 
+.links .wikiviajes {
+  grid-row: 1 / 3;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.links .wikcionario {
+  grid-row: 1 / 3;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
+.links .wikilibros{
+  grid-row: 1 / 3;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
+.links .wikinoticias {
+  grid-row: 1 / 3;
+  width: 4.7rem;
+  height: 2.6rem;
+}
+
+.links .wikidata {
+  grid-row: 1 / 3;
+  width: 4.9rem;
+  height: 4rem;
+}
+
+.links .wikiversidad {
+  grid-row: 1 / 3;
+  width: 4.3rem;
+  height: 3.7rem;
+}
+
+.links .wikiquote {
+  grid-row: 1 / 3;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.links .mediawiki {
+  grid-row: 1 / 3;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.links .wikisource {
+  grid-row: 1 / 3;
+  width: 3.9rem;
+  height: 3.9rem;
+}
+
+.links .wikispecies {
+  grid-row: 1 / 3;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.links .meta-wiki {
+  grid-row: 1 / 3;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
 .links figure img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
 .links p{
   color: var(--blue-color);
   padding-left: 0.5rem;
-
+  max-width: 17rem;
 }
 
 .links span {
   color: var(--gray-text);
   padding-left: 0.5rem;
-  padding-right: 5rem;
-  word-break: normal;
+  max-width: 17rem;
 }
 
 .license {
   text-align: center;
   font-family: var(--font-familiy-secondary);
   font-size: 1.3rem;
+  line-height: 2.2rem;
   color: var(--gray-text);
   padding: 1.8rem 0 1.8rem 0;
 }
@@ -451,7 +535,7 @@ body {
 
 .license .link-license {
   position: relative;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1.7rem 0 1.7rem;
 }
 
 .license .link-license::after {
@@ -462,4 +546,239 @@ body {
   height: 1rem;
   border-radius: 50%;
   color: var(--gray-text);
+}
+
+@media (max-width: 950px) {
+  .download .apps-links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 1.28rem;
+    position: relative;
+  }
+
+  .related-sites {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .donations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .donations figure {
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .donations p {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .donations a {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .download {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0.4rem 0 0.8rem 0;
+    margin-top: 35.5rem;
+  }
+  
+  .download > figure {
+    width: 2.7rem;
+    height: 2.7rem;
+    position: relative;
+    left: -14.3rem;
+    top: -13rem;
+    order: 1;
+  }
+  
+  .download strong {
+    padding: 0rem;
+    padding-top: 1rem;
+    max-width: 100%;
+  }
+  
+  .download p {
+    padding: 0rem;
+    max-width: 100%;
+    margin: 1.5rem 0 1.5rem 0;
+  }
+  
+  .download .apps-links {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .links-container {
+    display: grid;
+    width: 100%;
+    padding-left: 2rem;
+    position: absolute;
+    top: 15.2rem;
+    left: 0rem;
+  }
+}
+
+@media (max-width: 592px) {
+  .download > figure {
+    left: -14.3rem;
+    top: -15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    line-height: 2.4rem;
+  }
+
+  .title h1 {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  
+  .title h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .wiki_logo {
+    width: 5.7rem;
+    height: 5.216rem;
+    position: relative;
+    top: -33rem;
+    left: -8rem;
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .search {
+    max-width: 100%;
+    position: absolute;
+    top: 10rem;
+    margin: 0;
+  }
+
+  .search-input {
+    max-width: 36rem;
+    min-width: 30rem;
+  }
+
+  .search-input input {
+    max-width: 37rem;
+    padding-right: 5.4rem;
+  }
+
+  .select-false {
+    right: 7rem;
+  }
+
+  .languages {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: repeat(3, 6.4rem);
+    row-gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .language {
+    grid-row: unset;
+    grid-column: unset;
+    justify-self: unset;
+    margin-bottom: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .language a {
+    font-size: 1.4rem;
+  }
+
+  .language span {
+    margin-top: 0.4rem;
+    font-size: 1.3rem;
+  }
+
+  .container-select-language::before {
+    content: '_____';
+    position: relative;
+    width: 4rem;
+    right: 1.2rem;
+  }
+  
+  .container-select-language::after {
+    content: '_____';
+    position: relative;
+    width: 4rem;
+    left: 1.7rem;
+  }
+
+  .footer {
+    margin-bottom: 1.5rem;
+  }
+
+  .download {
+    padding: 0.4rem 0 0.8rem 0;
+    margin-top: 54.2rem;
+  }
+  
+  .links-container {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(4 , auto);
+    padding: 0 1rem;
+  }
+
+  .links {
+    grid-template-columns: 4.7rem auto;
+    grid-template-rows: 2rem auto;
+    padding: 1.3rem;
+  }
+}
+
+@media (max-width: 423px) {
+  .download > figure {
+    left: -14.3rem;
+    top: -17rem;
+  }
+}
+
+@media (max-width: 394px) {
+  .container-select-language::before {
+    content: '___';
+    position: relative;
+    width: 2rem;
+    right: 1.2rem;
+  }
+  
+  .container-select-language::after {
+    content: '___';
+    position: relative;
+    width: 2rem;
+    left: 1rem;
+  }
 }
