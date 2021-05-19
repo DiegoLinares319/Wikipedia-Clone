@@ -496,6 +496,7 @@ body {
 .links p{
   color: var(--blue-color);
   padding-left: 0.5rem;
+  max-width: 17rem;
 }
 
 .links span {
@@ -634,10 +635,10 @@ body {
   .links-container {
     display: grid;
     width: 100%;
-    padding-right: 0rem;
+    padding-left: 2rem;
     position: absolute;
     top: 15.2rem;
-    left: 1.28rem;
+    left: 0rem;
   }
 }
 
@@ -649,6 +650,93 @@ body {
 }
 
 @media (max-width: 480px) {
+  .title {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    line-height: 2.4rem;
+  }
+
+  .title h1 {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  
+  .title h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .wiki_logo {
+    width: 5.7rem;
+    height: 5.216rem;
+    position: relative;
+    top: -33rem;
+    left: -8rem;
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .search {
+    max-width: 100%;
+    position: absolute;
+    top: 10rem;
+    margin: 0;
+  }
+
+  .search-input {
+    max-width: 36rem;
+    min-width: 30rem;
+  }
+
+  .search-input input {
+    max-width: 37rem;
+    padding-right: 5.4rem;
+  }
+
+  .select-false {
+    right: 7rem;
+  }
+
+  .languages {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: repeat(3, 6.4rem);
+    row-gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .language {
+    grid-row: unset;
+    grid-column: unset;
+    justify-self: unset;
+    margin-bottom: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .language a {
+    font-size: 1.4rem;
+  }
+
+  .language span {
+    margin-top: 0.4rem;
+    font-size: 1.3rem;
+  }
+
+  .container-select-language::before {
+    content: '_____';
+    position: relative;
+    width: 4rem;
+    right: 1.2rem;
+  }
+  
+  .container-select-language::after {
+    content: '_____';
+    position: relative;
+    width: 4rem;
+    left: 1.7rem;
+  }
 
   .footer {
     margin-bottom: 1.5rem;
@@ -658,11 +746,39 @@ body {
     padding: 0.4rem 0 0.8rem 0;
     margin-top: 54.2rem;
   }
-
+  
   .links-container {
-    position: absolute;
-    top: 15.2rem;
-    left: 1.28rem;
     grid-template-columns: auto auto;
+    grid-template-rows: repeat(4 , auto);
+    padding: 0 1rem;
+  }
+
+  .links {
+    grid-template-columns: 4.7rem auto;
+    grid-template-rows: 2rem auto;
+    padding: 1.3rem;
+  }
+}
+
+@media (max-width: 423px) {
+  .download > figure {
+    left: -14.3rem;
+    top: -17rem;
+  }
+}
+
+@media (max-width: 394px) {
+  .container-select-language::before {
+    content: '___';
+    position: relative;
+    width: 2rem;
+    right: 1.2rem;
+  }
+  
+  .container-select-language::after {
+    content: '___';
+    position: relative;
+    width: 2rem;
+    left: 1rem;
   }
 }
